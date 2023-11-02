@@ -1,0 +1,16 @@
+<div class="justify-content-center">
+    <h2 class="text-center align-middle text-info bg-success">See your posts</h2>
+    <!-- {{PostData|json}} -->
+    <div class="row   align-text-bottom text-center align-middle justify-content-center " style = "height:40px">
+        <div class="col-1 align-items-center  d-flex fs-4 bg-success-subtle border border-success">Id</div>
+        <div class="col-2  align-items-center  d-flex fs-4 bg-success-subtle border border-success">Name</div>
+        <div class="col-6 align-items-center  d-flex fs-4 bg-success-subtle border border-success">Description</div>
+    </div>
+    <div class="row   align-text-bottom text-center align-middle justify-content-center " role ="button" (click)="editPost(i)" 
+    *ngFor="let post of postData,let i=index;" style = "height:40px">
+        <div class="col-1 align-items-center  d-flex fs-6 bg-primary-subtle border border-success">{{post.id}}</div>
+        <div class="col-2  align-items-center  d-flex fs-6 bg-primary-subtle border border-success">{{post.name}}</div>
+        <div class="col-6 align-items-center  d-flex fs-6 bg-primary-subtle border border-success">{{post.description}}</div>
+    </div>
+
+</div>

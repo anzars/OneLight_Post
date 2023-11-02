@@ -1,0 +1,46 @@
+<div class="justify-content-center">
+<h2  #his class="text-center text-success"  style="text-decoration:underline">Edit your Post</h2>
+
+<form  #f="ngForm"  class="container-fluid justify-content-center" *ngIf="postdata" (ngSubmit)="formsubmit(f)" >
+    <div class="row justify-content-center mt-2 " >
+    <div class="col-form-label col-sm-1"> <label >Post id:</label> </div>
+    <div class="col-sm-1 "><input name="id" class="bg-info-subtle" [(ngModel)]="postdata.id" [value]="postdata.id" #postid="ngModel"  [readOnly]="true" required/></div>
+    </div>
+    <div class="row justify-content-center " >
+
+        <p class="text-center text-danger bg-warning-subtle" style ="width:500px" *ngIf="!postid.valid && postid.touched">Please enter id.</p>
+       </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-form-label col-sm-1"><label>Post name:</label> </div>
+        <div class="col-sm-1"><input name="name" [ngModel]="postdata.name"[value]="postdata.name|titlecase"  required /></div>
+    </div>  
+    <div class="row justify-content-center mt-2">
+        <div class="col-form-label col-sm-1"> <label>Post description:</label> </div>
+        <div class="col col-sm-1" ><textarea style="width:400px" name="description" required [(ngModel)]="postdata.description">{{postdata.description}}</textarea></div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-form-label col-sm-1"> <label>Image</label> </div>
+        <div class="col col-sm-1 " ><img #pic name="imageurl" [(ngModel)]="postdata.imageurl" style="width:200px;"  src="{{postdata.imageurl}}"/></div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <input type="file"  #file style="display:none;"  accept="image/*" (change)="onfileselected($event)"/>
+        <button  type="button" class="btn btn-info" style="width: 200px"(click)="file.click()">Change Image</button>
+    </div>
+    
+
+  
+    
+   <div class="row justify-content-center mt-4">
+
+    <button type="submit" style="width:200px" class="btn-success btn" [disabled]="!f.valid">Submit Post</button>
+   </div>   
+   <div class="row justify-content-center mt-4" >
+
+    <p class="text-center text-danger bg-primary-subtle" style ="width:500px" *ngIf="!f.valid && f.touched">Please enter all fields.</p>
+   </div>
+<p></p>
+</form>
+
+</div>
+
+

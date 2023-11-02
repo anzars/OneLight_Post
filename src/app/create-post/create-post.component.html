@@ -1,0 +1,20 @@
+<div>
+<h3 class="text-center">Create Post</h3>    
+<form [formGroup]="createform" (ngSubmit)="submitform()">
+    <label>id</label>
+    <input  type= "number" formControlName="id"/>
+
+    <label>name</label>
+    <input formControlName ="name"/>
+
+    <label>description</label>
+    <textarea formControlName="description"></textarea>
+    <p  class="bg-warning text-primary" *ngIf="!createform.get('description').valid"> Enter valid description</p>
+<button type="submit" [disabled]="!createform.valid">Submit</button>
+{{createform.get('description').errors|json}}
+
+<button type="button" (click)="resetform()">Reset</button>
+    
+</form>
+
+</div>

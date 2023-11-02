@@ -1,0 +1,21 @@
+
+<div style="width:250px">
+    {{user|json}}
+    <asl-google-signin-button  type="standard" size=
+    "medium" ><button>Login</button></asl-google-signin-button>
+
+<button class="btn-primary btn "  (click)="loginwithfacebook()">Login with Facebook</button>
+{{fbtoken|json}}
+<button class="btn btn-secondary" (click)="logout()">Log Out</button>
+</div>
+
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+{{gtoken|json}}
+<lib-anzlib></lib-anzlib>
+<button (click)="payment()">proceed to payment</button>

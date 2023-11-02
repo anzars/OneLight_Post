@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 0,
+      "name": "Abu says",
+      "description": "This is My first Post.It is amazing.Thankyou for reading.Abu gulli",
+      "imageurl": "blob:http://localhost:4200/918ec6da-117b-4697-943e-de9395aebd2d"
+    },
+    {
+      "id": 1,
+      "name": "Umar Post",
+      "description": "Umar says Thankyou.Assalamulaikum",
+      "imageurl": "blob:http://localhost:4200/d0d15431-458a-472e-9c50-0b31e6b75cb9"
+    },
+    {
+      "id": 2,
+      "name": "Khidr Says",
+      "description": "Thankyou all .JazakAllahukhair.",
+      "imageurl": "blob:http://localhost:4200/1e4580de-a26a-4b94-bc7b-9b715b545b1f"
+    },
+    {
+      "id": 3,
+      "name": "anzar says",
+      "description": "Hello ooooaaaaoooo boooooo",
+      "imageurl": "blob:http://localhost:4200/398c2696-7a5f-48f0-8cd6-59d6a8e9f14d"
+    }
+  ]
+}
